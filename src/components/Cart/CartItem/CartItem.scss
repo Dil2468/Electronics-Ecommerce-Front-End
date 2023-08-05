@@ -1,0 +1,94 @@
+@import "../../../css-config/mixins.scss";
+.card-container {
+  margin: 20px 0px;
+
+  width: 100%;
+  @include md {
+    max-width: fit-content;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    margin-bottom: 15px;
+    @include md {
+      //  grid-template-columns: auto auto auto;
+    }
+    .img-cont {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+
+      background-color: rgba(0, 0, 0, 0.05);
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-weight: 600;
+        font-size: 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 190px;
+        overflow: hidden;
+      }
+      .Count {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+
+        width: 120px;
+        height: 30px;
+        span {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-size: 18px;
+          font-weight: 700;
+          color: #6b6b6b;
+          padding: 0 12px;
+          height: 100%;
+          &:nth-child(1) {
+            border-right: 2px solid rgba(0, 0, 0, 0.5);
+          }
+          &:nth-child(2) {
+            width: 60px;
+          }
+          &:nth-child(3) {
+            border-left: 2px solid rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+      .Multiply {
+        display: flex;
+        align-items: center;
+        width: 70px;
+        justify-content: space-between;
+
+        span {
+          font-weight: 600;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #6b6b6b;
+        }
+      }
+    }
+    .closeicon {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

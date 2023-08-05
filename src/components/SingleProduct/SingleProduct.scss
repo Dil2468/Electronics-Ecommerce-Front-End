@@ -1,0 +1,193 @@
+@import "../../css-config/mixins.scss";
+.main-container {
+  margin: 20px 0;
+  @include md {
+    margin: 75px 0;
+  }
+
+  .single-content {
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 15px;
+    @include md {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 30px;
+    }
+    .left {
+      background-color: rgba(0, 0, 0, 0.05);
+      width: 100%;
+      @include md {
+        width: 600px;
+        height: 600px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .right-section {
+      width: 350px;
+      @include md {
+        width: 550px;
+      }
+
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        @include md {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+      }
+      .price {
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 14px;
+        @include md {
+          font-size: 32px;
+        }
+      }
+      .Desc {
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 1.4;
+        font-size: 14px;
+        font-weight: 500;
+
+        @include md {
+          font-size: 18px;
+        }
+      }
+      .button-content {
+        margin-top: 20px;
+        display: flex;
+        margin-right: 20px;
+        @include md {
+          margin-top: 38px;
+        }
+        .span-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 2px solid rgba(0, 0, 0, 0.2);
+          width: fit-content;
+          span {
+            height: 100%;
+            font-size: 18px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #6b6b6b;
+            &:nth-child(1) {
+              border-right: 2px solid rgba(0, 0, 0, 0.2);
+            }
+            &:nth-child(2) {
+              width: 60px;
+            }
+            &:nth-child(3) {
+              border-left: 2px solid rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+        .add-to-cart-btn {
+          margin-left: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            width: 180px;
+            height: 50px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            background-color: #8e2de2;
+            color: rgba(255, 255, 255, 0.8);
+            border: none;
+            outline: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #8e2de2;
+            cursor: pointer;
+            flex-grow: 1;
+            @include md {
+              font-size: 16px;
+              flex-grow: unset;
+            }
+            svg {
+              color: white;
+              display: flex;
+              flex-shrink: 0;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+      .divider {
+        margin: 20px 0;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .category-section {
+        display: flex;
+
+        margin: 20px 0;
+        gap: 4px;
+        @include md {
+          margin: 30px 0;
+        }
+        .cat-title {
+          font-weight: 600;
+          font-size: 20px;
+          @include md {
+            font-size: 24px;
+          }
+        }
+        .c-item {
+          color: rgba(0, 0, 0, 0.5);
+          font-weight: 400;
+          font-size: 20px;
+          @include md {
+            font-size: 24px;
+          }
+        }
+      }
+      .social-media {
+        display: flex;
+
+        align-items: center;
+        gap: 4px;
+
+        .cat-title {
+          font-weight: 600;
+          font-size: 20px;
+          @include md {
+            font-size: 24px;
+          }
+        }
+        .c-item {
+          display: flex;
+          cursor: pointer;
+          gap: 10px;
+          color: rgba(0, 0, 0, 0.5);
+          font-weight: 400;
+          //  font-size: 20px;
+          @include md {
+            //  font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

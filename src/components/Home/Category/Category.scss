@@ -1,0 +1,88 @@
+@import "../../../css-config/mixins.scss";
+
+.shop-by-category{
+    margin: 25px 0;
+   
+    @include md{
+        margin: 50px 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .leftarrow{
+     
+
+         svg{
+            visibility: collapse;
+             @include md{
+             color: rgba(0,0,0,0.6);
+             visibility: inherit;
+             }
+         }
+         &:hover{
+             @include md{
+
+             
+             opacity: 0.3;
+             }
+         }
+
+     }
+
+
+    // .category-content{
+    //     display: flex;
+
+        .grid-category{
+            display: grid;
+            grid-template-columns: auto auto ;
+            column-gap: 10px;
+           // height: 170px;
+            row-gap: 10px;
+            @include md{
+                grid-template-columns: auto auto auto auto ;
+            }
+   
+          
+
+          .img-category{
+            
+            cursor: pointer;
+            height: 100%;
+            width: 100%;            
+             overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    transition: all ease 0.3s;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            
+        }
+
+        .rightarrow{
+          
+
+            svg{
+                visibility: collapse;
+                @include md{
+                color: rgba(0,0,0,0.6);
+                visibility: inherit;
+                }
+            }
+            &:hover{
+                @include md{
+
+                
+                opacity: 0.3;
+                }
+            }
+
+        }
+
+    }

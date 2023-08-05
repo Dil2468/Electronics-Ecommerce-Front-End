@@ -1,0 +1,104 @@
+@import "../../../css-config/mixins.scss";
+
+.newsletter-section {
+  width: 100%;
+  background: #f9f9f9 url(../../../assets/newsletter-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  //background-attachment: fixed;
+  height: 400px;
+  display: flex;
+  align-items: center;
+
+  .newsletter-content {
+    width: fit-content;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    .small-letter {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 15px;
+    }
+    .big-letter {
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      padding: 0 30px;
+      line-height: 1.4;
+      @include md {
+        font-size: 28px;
+      }
+    }
+    .form {
+      display: flex;
+      gap: 5px;
+
+      margin-bottom: 10px;
+
+      input {
+        padding: 0 12px;
+        height: 40px;
+        width: 200px;
+        border-radius: 0;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        outline: none;
+        @include md {
+          width: 300px;
+        }
+      }
+      button {
+        background-color: #8e2de2;
+        color: white;
+        font-size: 16px;
+        width: 100px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-bottom: 3px solid #8e2de2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include md {
+          width: 120px;
+        }
+      }
+    }
+    .text {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      //  line-height: 1.4;
+      margin-bottom: 20px;
+      @include md {
+        font-size: 18px;
+      }
+    }
+    .socialmedia-icons {
+      display: flex;
+      // margin-top: 10px;
+      gap: 10px;
+
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        @include md {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
